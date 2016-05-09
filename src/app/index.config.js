@@ -24,6 +24,15 @@
           redirect_uri:'http://172.168.1.17:8080/googlesignin'
       });
 
+      $authProvider.facebook({
+          clientId: 'Facebook App ID',
+          responseType: 'token'
+      });
+
+      $authProvider.twitter({
+          clientId: 'Twitter App ID',
+          responseType: 'token'
+      });
   }
 
 })();

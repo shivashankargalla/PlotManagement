@@ -2,46 +2,59 @@
     <div>
         <acme-navbar creation-date="main.creationDate"></acme-navbar>
     </div>
-    <div class="row">
-        <form class="form-signin mg-btm">
-            <h3 class="heading-desc">
-                Login</h3>
-            <div class="main">
-                <label>Email</label>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input type="text" class="form-control" placeholder="" autofocus ng-model="user.username">
-                </div>
-                <label>Password   <a href="">(forgot password)</a></label>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+    <div class="main-content">
+
+        <!-- You only need this form and the form-login.css -->
+
+        <form class="form-login" method="post" action="#">
+
+            <div class="form-log-in-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>Log in</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="password">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit">Log in</button>
+                    </div>
+
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                        <button ng-click="authenticate('google')">Sign in with Google</button> 
-                    </div>
-                    <div class="col-xs-6 col-md-6 pull-right">
-                        <button type="submit" class="btn btn-large btn-success pull-right">Login</button>
-                    </div>
-                </div>
+                <a href="#" class="form-forgotten-password">Forgotten password &middot;</a>
+                <a href="#" class="form-create-an-account">Create an account &rarr;</a>
+
             </div>
 
-            <span class="clearfix"></span>
+            <div class="form-sign-in-with-social">
 
-
-            <div class="login-footer">
-                <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                        <div class="left-section">
-                            <a href="">Create an account</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-6 pull-right">
-                    </div>
+                <div class="form-row form-title-row">
+                    <span class="form-title">Sign in with</span>
                 </div>
+
+                <a href="#" class="form-google-button" ng-click="authenticate('google')">Google</a>
+                <a href="#" class="form-facebook-button" ng-click="authenticate('facebook')">Facebook</a>
+                <a href="#" class="form-twitter-button" ng-click="authenticate('twitter')">Twitter</a>
+
             </div>
+
         </form>
+
     </div>
+
 </div>
