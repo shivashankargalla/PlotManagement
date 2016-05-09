@@ -10,6 +10,7 @@
     var vm = this;
 
     vm.awesomeThings = [];
+
     vm.classAnimation = '';
     vm.creationDate = 1462366232271;
     vm.showToastr = showToastr;

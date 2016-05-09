@@ -1,5 +1,0 @@
-angular.module('pip')
-    .controller('LoginController', function () {
-
-
-    });
