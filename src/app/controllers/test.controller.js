@@ -9,7 +9,10 @@
 
     angular
         .module('pip')
-        .controller('testController',  function($scope, $auth,$stateParams) {
+        .controller('testController',  function($scope, $auth,$stateParams,store) {
+            var token =$stateParams.token;
+            var myObj = {};
+            store.set('obj', myObj);
 
             var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 

@@ -12,13 +12,13 @@
             url: '/login',
             templateUrl: 'app/views/login.html',
             controller: 'LoginController'
-        });
+        })
 
-       /* .state('googlesignin', {
-          url: '/googlesignin',
+        .state('showMap', {
+          url: '/showMap/:token',
           templateUrl: 'app/views/test.html',
           controller: 'testController'
-      });*/
+      });
 
 
       /*$locationProvider.html5Mode(true);*/

@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('pip', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'restangular', 'ui.router', 'ui.bootstrap', 'toastr', 'satellizer']);
+    .module('pip', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'restangular', 'ui.router', 'ui.bootstrap', 'toastr', 'satellizer','angular-storage']);
 
 })();
