@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var conf = require('./conf');
 
 var browserSync = require('browser-sync');
+var historyApiFallback = require('connect-history-api-fallback');
 var browserSyncSpa = require('browser-sync-spa');
 
 var util = require('util');
@@ -33,12 +34,14 @@ function browserSyncInit(baseDir, browser) {
    *
    * For more details and option, https://github.com/chimurai/http-proxy-middleware/blob/v0.9.0/README.md
    */
-  // server.middleware = proxyMiddleware('/users', {target: 'http://jsonplaceholder.typicode.com', changeOrigin: true});
+  server.middleware = proxyMiddleware('/googlesignin', {target: 'http://172.168.1.17:8080', changeOrigin: true});
 
   browserSync.instance = browserSync.init({
     startPath: '/',
     server: server,
-    browser: browser
+    middleware: [historyApiFallback()],
+    browser: browser,
+      port:3000
   });
 }
 

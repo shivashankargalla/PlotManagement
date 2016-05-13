@@ -6,20 +6,23 @@
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
+  function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
     $stateProvider
-        .state('home', {
-            url: '/',
-            templateUrl: 'app/main/main.html',
-            controller: 'MainController'
-        })
         .state('login', {
             url: '/login',
             templateUrl: 'app/views/login.html',
             controller: 'LoginController'
         });
 
-    $urlRouterProvider.otherwise('/');
+       /* .state('googlesignin', {
+          url: '/googlesignin',
+          templateUrl: 'app/views/test.html',
+          controller: 'testController'
+      });*/
+
+
+      /*$locationProvider.html5Mode(true);*/
+    $urlRouterProvider.otherwise('/login');
   }
 
 })();
