@@ -1,7 +1,9 @@
 {
   "name": "pip",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "leaflet-search": "^1.9.7"
+  },
   "scripts": {
     "test": "gulp test"
   },

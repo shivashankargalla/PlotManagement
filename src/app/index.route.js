@@ -15,7 +15,7 @@
         })
 
         .state('showMap', {
-          url: '/showMap/:token',
+          url: '/showMap',
           templateUrl: 'app/views/test.html',
           controller: 'testController'
       });
